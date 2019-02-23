@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
+import { Button, TextField } from '@material-ui/core';
 import axios from 'axios';
 
 class Question extends Component {
@@ -13,12 +13,8 @@ class Question extends Component {
     
       handleSubmit = event => {
         event.preventDefault();
-    
-        const user = {
-          name: this.state.name
-        };
 
-        axios.post(`https://62167432-83e6-4153-a9ed-c53ed93b81f7.mock.pstmn.io/api/qns`, { user })
+        axios.post(`https://5c710ac10eddba001435b5c0.mockapi.io/api/questions`, this.state.name )
           .then(res => {
             console.log(res);
             console.log(res.data);
@@ -44,7 +40,7 @@ class Question extends Component {
           variant="outlined"
         />
             <br/><br/>
-      <a className="btn aqua-gradient btn-rounded my-0 js-scroll-trigger" onClick={this.handleSubmit}>Submit</a>
+      <Button className="btn aqua-gradient btn-rounded my-0 js-scroll-trigger" onClick={this.handleSubmit}>Submit</Button>
             </div>
         );
     }

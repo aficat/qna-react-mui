@@ -5,14 +5,16 @@ import axios from 'axios';
 
 class Listings extends Component {
   state = {
-    persons: []
+    questions: []
   }
 
   componentDidMount() {
-    axios.get(`https://62167432-83e6-4153-a9ed-c53ed93b81f7.mock.pstmn.io/api/qns`)
-      .then(res => {
-        const persons = res.data.result;
-        this.setState({ persons });
+    axios.get(`https://5c710ac10eddba001435b5c0.mockapi.io/api/questions`)
+      .then(result => {
+        // console.log(result.data)
+        this.setState({ 
+          questions: result.data,
+        });
       })
   }
     render() {
@@ -23,7 +25,7 @@ class Listings extends Component {
             <Typography variant="h6">
               Questions 
             </Typography>
-{ this.state.persons.map(person => <p align="center">{person.question}</p>)}
+            { this.state.questions.map(question => <p align="center">{question.question}</p>)}
           </Grid>
             </div>
         );
