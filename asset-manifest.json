@@ -1,14 +1,13 @@
 {
-  "main.css": "/qna-react-mui/static/css/main.040e052f.chunk.css",
-  "main.js": "/qna-react-mui/static/js/main.f480b5d8.chunk.js",
-  "main.js.map": "/qna-react-mui/static/js/main.f480b5d8.chunk.js.map",
-  "runtime~main.js": "/qna-react-mui/static/js/runtime~main.ed7d0923.js",
-  "runtime~main.js.map": "/qna-react-mui/static/js/runtime~main.ed7d0923.js.map",
-  "static/js/2.5bf9b2cd.chunk.js": "/qna-react-mui/static/js/2.5bf9b2cd.chunk.js",
-  "static/js/2.5bf9b2cd.chunk.js.map": "/qna-react-mui/static/js/2.5bf9b2cd.chunk.js.map",
+  "main.css": "/qna-react-mui/static/css/main.43636a30.chunk.css",
+  "main.js": "/qna-react-mui/static/js/main.38f79cb9.chunk.js",
+  "main.js.map": "/qna-react-mui/static/js/main.38f79cb9.chunk.js.map",
+  "static/js/1.65ef417d.chunk.js": "/qna-react-mui/static/js/1.65ef417d.chunk.js",
+  "static/js/1.65ef417d.chunk.js.map": "/qna-react-mui/static/js/1.65ef417d.chunk.js.map",
+  "runtime~main.js": "/qna-react-mui/static/js/runtime~main.c624771a.js",
+  "runtime~main.js.map": "/qna-react-mui/static/js/runtime~main.c624771a.js.map",
+  "static/css/main.43636a30.chunk.css.map": "/qna-react-mui/static/css/main.43636a30.chunk.css.map",
   "index.html": "/qna-react-mui/index.html",
-  "precache-manifest.bc5278bf8d5f37fb1b4013bb1d7d07b3.js": "/qna-react-mui/precache-manifest.bc5278bf8d5f37fb1b4013bb1d7d07b3.js",
-  "service-worker.js": "/qna-react-mui/service-worker.js",
-  "static/css/main.040e052f.chunk.css.map": "/qna-react-mui/static/css/main.040e052f.chunk.css.map",
-  "static/media/logo.svg": "/qna-react-mui/static/media/logo.5d5d9eef.svg"
+  "precache-manifest.b28ee7277ac5329b467f028d12202f4b.js": "/qna-react-mui/precache-manifest.b28ee7277ac5329b467f028d12202f4b.js",
+  "service-worker.js": "/qna-react-mui/service-worker.js"
 }
