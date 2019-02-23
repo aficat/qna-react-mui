@@ -1,3 +1,6 @@
+# qna-react-mui
+A simple Q&amp;A React app using Material UI framework.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
