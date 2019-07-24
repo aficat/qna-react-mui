@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
+import { observer } from 'mobx-react';
 
 class Listings extends Component {
   state = {
@@ -32,4 +33,5 @@ class Listings extends Component {
     }
 }
 
+Listings = observer(Listings);
 export default Listings;

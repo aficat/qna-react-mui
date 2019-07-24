@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, TextField } from '@material-ui/core';
 import axios from 'axios';
+import { observer } from 'mobx-react';
 
 class Question extends Component {
     state = {
@@ -46,4 +47,5 @@ class Question extends Component {
     }
 }
 
+Question = observer(Question);
 export default Question;
