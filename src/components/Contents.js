@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import QuestionsList from './QuestionsList';
+import QuestionsList from './Contents/QuestionsList';
 import { observer } from 'mobx-react';
 import Question from './Question';
 

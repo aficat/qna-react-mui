@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import SubmitQuestion from './Question/SubmitQuestion';
-import QuestionsList from './QuestionsList';
+import QuestionsList from './Contents/QuestionsList';
 
 class Question extends Component {
 

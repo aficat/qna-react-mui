@@ -1,7 +1,33 @@
 # qna-react-mui
-A simple Q&amp;A React app using Material UI framework. Users could simply post questions or answer any of the questions.
+A simple Q&amp;A React app using Material UI framework. Users could simply post questions or answer any of the questions. Deployed using gh-pages.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Version Control Log
+All notable version control changes to this project will be documented in [CHANGELOG.md](https://github.com/aficat/qna-react-mui/blob/master/CHANGELOG.md).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Overview of Components
+### Wireframes
+Wireframe can be found in "wireframes" folder called "design.xd".
+
+### Component Layout
+
+        Index
+        |        
+        |__ Navigation - navigate between pages
+        |    |__ about - about me page
+        |    |__ blog - blog page
+        |    |    |__ blogPost - single blog post
+        |    |__ code - coding projects page
+        |    |__ contact - contact me page
+        |    |__ designs - design projects page
+        |
+        |__ HomePage
+        |    |__ PaintBackground
+        |
+        |__ Footer
 
 ## Available Scripts
 
