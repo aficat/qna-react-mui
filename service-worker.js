@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/qna-react-mui/precache-manifest.3587ba48410d21af77077a7b02e03146.js"
+  "/qna-react-mui/precache-manifest.436b3ac0956ee9dcd27b497f661c2e59.js"
 );
 
 workbox.clientsClaim();
