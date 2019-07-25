@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
-import Listings from './Listings';
+import QuestionsList from './QuestionsList';
 import { observer } from 'mobx-react';
 import Question from './Question';
 
 class Contents extends Component {
+
+    routeToHome = () => {
+      const { questionStore } = this.props;
+      questionStore.updateCurrentPage('home');
+    }
+  
+    routeToQ = () => {
+      const { questionStore } = this.props;
+      questionStore.updateCurrentPage('question');
+    }
 
     render() {
         const { questionStore } = this.props;
         const { keyResult } = questionStore;
         switch (keyResult) {
             case 'home':
-                return <Listings />;
+                return <QuestionsList />;
             case 'question':
                 return <Question />;
             default:
