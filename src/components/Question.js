@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import SubmitQuestion from './Question/SubmitQuestion';
-import QuestionsList from './Contents/QuestionsList';
+import QuestionDisplay from './Question/QuestionDisplay';
 
 class Question extends Component {
 
@@ -12,7 +12,7 @@ class Question extends Component {
             case 'home': //displays textfield to submit question
                 return <SubmitQuestion questionStore={questionStore}/>;
             case 'question': // displays question selected
-                return <QuestionsList questionStore={questionStore}/>;
+                return <QuestionDisplay questionStore={questionStore}/>;
             default:
                 return;
         }

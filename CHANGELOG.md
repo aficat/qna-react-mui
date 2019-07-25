@@ -5,13 +5,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2019-MM-DD
 ### Changed
-- 
+- Updated page names and button alignment
 
 ### Fixed
-- 
+- Fixed routing between pages.
 
 ### Added
-- 
+- QuestionDisplay page
+- AnswersList page
 
 ### Removed
 - Removed unused css files.

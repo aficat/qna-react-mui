@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuestionsList from './Contents/QuestionsList';
 import { observer } from 'mobx-react';
-import Question from './Question';
+import AnswersList from './Contents/AnswersList';
 
 class Contents extends Component {
 
@@ -12,7 +12,7 @@ class Contents extends Component {
             case 'home': //displays list of questions
                 return <QuestionsList questionStore={questionStore}/>;
             case 'question': //displays list of answers for question selected
-                return <Question questionStore={questionStore}/>;
+                return <AnswersList questionStore={questionStore}/>;
             default:
                 return;
         }
