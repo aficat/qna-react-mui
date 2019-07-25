@@ -15,19 +15,18 @@ Wireframe can be found in "wireframes" folder called "design.xd".
 ### Component Layout
 
         Index
-        |        
-        |__ Navigation - navigate between pages
-        |    |__ about - about me page
-        |    |__ blog - blog page
-        |    |    |__ blogPost - single blog post
-        |    |__ code - coding projects page
-        |    |__ contact - contact me page
-        |    |__ designs - design projects page
-        |
-        |__ HomePage
-        |    |__ PaintBackground
-        |
-        |__ Footer
+        |     
+        |__ App 
+            |
+            |__ MenuBar - Top Application Bar
+            |     
+            |__ Question - navigate between pages
+            |    |__ SubmitQuestion
+            |    |__ QuestionDisplay
+            |     
+            |__ Contents - navigate between pages
+                |__ QuestionsList
+                |__ AnswersList
 
 ## Available Scripts
 
