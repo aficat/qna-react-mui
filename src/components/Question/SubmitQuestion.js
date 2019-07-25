@@ -8,16 +8,18 @@ class SubmitQuestion extends Component {
         name: '',
     }
 
+    // set state of new question typed in text field
     handleChange = event => {
         this.setState({ name: event.target.value });
     }
 
+    // submit question by calling api to post question
     handleSubmit = event => {
         event.preventDefault();
-        axios.post(`https://5c710ac10eddba001435b5c0.mockapi.io/api/questions`, this.state.name)
+        axios.post(`https://5c2d8434b8051f0014cd478a.mockapi.io/question`, { question: this.state.name })
             .then(res => {
-                console.log(res);
-                console.log(res.data);
+                // console.log(res);
+                // console.log(res.data);
             });
     }
 
@@ -28,13 +30,12 @@ class SubmitQuestion extends Component {
                     <Grid item md={10}>
                         <TextField
                             id="outlined-multiline-static"
-                            label="Post Your Question"
+                            label="Post Your Question Here"
                             multiline
                             rows="4"
                             type="text"
-                            name="question"
-                            onChange={this.onChange}
-                            defaultValue="Type your question here"
+                            name={this.state.name}
+                            onChange={this.handleChange}
                             margin="normal"
                             variant="outlined"
                             fullWidth

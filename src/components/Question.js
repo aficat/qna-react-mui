@@ -9,9 +9,9 @@ class Question extends Component {
         const { questionStore } = this.props;
         const { keyResult } = questionStore;
         switch (keyResult) {
-            case 'home':
+            case 'home': //displays textfield to submit question
                 return <SubmitQuestion questionStore={questionStore}/>;
-            case 'question':
+            case 'question': // displays question selected
                 return <QuestionsList questionStore={questionStore}/>;
             default:
                 return;

@@ -3,15 +3,33 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import { observer } from 'mobx-react';
-import { Card } from '@material-ui/core';
+import { Card, CardActions, CardHeader, Button } from '@material-ui/core';
 
-class Listings extends Component {
+class QuestionsList extends Component {
   state = {
     questions: []
   }
 
   componentDidMount() {
-    axios.get(`https://5c710ac10eddba001435b5c0.mockapi.io/api/questions`)
+    this.getQuestionsAPI();
+  }
+
+  componentDidUpdate() {
+    this.getQuestionsAPI();
+  }
+
+  routeToHome = () => {
+    const { questionStore } = this.props;
+    questionStore.updateCurrentPage('home');
+  }
+
+  routeToQ = () => {
+    const { questionStore } = this.props;
+    questionStore.updateCurrentPage('question');
+  }
+
+  getQuestionsAPI = () => {
+    axios.get(`http://5c2d8434b8051f0014cd478a.mockapi.io/question`)
       .then(result => {
         // console.log(result.data)
         this.setState({
@@ -19,21 +37,32 @@ class Listings extends Component {
         });
       })
   }
-  render() {
 
+  render() {
     return (
       <div>
         <Typography variant="h6">
           List of Questions
         </Typography>
         <br />
-        <Grid container spacing={24} style={{ maxWidth: 1200 }}>
+        <Grid container spacing={24} justify="center" style={{ maxWidth: 1200 }}>
           {this.state.questions.map(question =>
-            <Grid item md={3}>
+            <Grid item md={3} key={question.id}>
               <Card>
-                <p align="center">
-                  {question.question}
-                </p>
+                <CardHeader
+                  avatar={null}
+                  action={null}
+                  title={question.question}
+                  titleTypographyProps={{ variant: "subtitle1" }}
+                />
+                <CardActions style={{ borderTop: "#E1E1E1 solid 1px", align: "center" }}>
+                  <Button size="small" onClick={this.routeToQ}>
+                    <Typography variant="caption">View Answers ({question.answers.length})</Typography>
+                  </Button>
+                  <Button size="small" onClick={null}>
+                    <Typography variant="caption">Delete Question</Typography>
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           )}
@@ -43,5 +72,5 @@ class Listings extends Component {
   }
 }
 
-Listings = observer(Listings);
-export default Listings;
+QuestionsList = observer(QuestionsList);
+export default QuestionsList;

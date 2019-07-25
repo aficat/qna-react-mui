@@ -14,15 +14,15 @@
 }
 
 .App-question {
-  background-color:#f9fbe7;
+  background-color:#ffffff;
 }
 
 .App-listing {
-  background-color:#dcfffd; 
+  background-color:#EBF6FF; 
 }
 
 .App-link {
-  color: #61dafb;
+  color: #EBF6FF;
 }
 
 @keyframes App-logo-spin {

@@ -5,24 +5,14 @@ import Question from './Question';
 
 class Contents extends Component {
 
-    routeToHome = () => {
-      const { questionStore } = this.props;
-      questionStore.updateCurrentPage('home');
-    }
-  
-    routeToQ = () => {
-      const { questionStore } = this.props;
-      questionStore.updateCurrentPage('question');
-    }
-
     render() {
         const { questionStore } = this.props;
         const { keyResult } = questionStore;
         switch (keyResult) {
-            case 'home':
-                return <QuestionsList />;
-            case 'question':
-                return <Question />;
+            case 'home': //displays list of questions
+                return <QuestionsList questionStore={questionStore}/>;
+            case 'question': //displays list of answers for question selected
+                return <Question questionStore={questionStore}/>;
             default:
                 return;
         }
