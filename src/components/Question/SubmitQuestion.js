@@ -44,7 +44,8 @@ class SubmitQuestion extends Component {
                     </Grid>
                     <Grid item md={2} style={{ paddingTop: 28 }}>
                         <Button
-                            className="btn aqua-gradient btn-rounded my-0 js-scroll-trigger"
+                            variant="contained"
+                            color="primary"
                             onClick={this.handleSubmit}
                             fullWidth
                         >

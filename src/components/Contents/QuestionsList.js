@@ -41,7 +41,7 @@ class QuestionsList extends Component {
   render() {
     return (
       <div>
-        <Typography variant="h6">
+        <Typography variant="h6" style={{ paddingTop: 18 }}>
           List of Questions
         </Typography>
         <br />

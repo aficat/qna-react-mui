@@ -7,7 +7,7 @@ class MenuBar extends Component {
         return (
             <AppBar position="static" color="default" style={{ alignItems: "center" }} >
                 <Toolbar disableGutters={true}>
-                    <Typography variant="h5" color="default" style={{ paddingBottom: 24 }}>
+                    <Typography variant="h5" color="default" style={{ paddingTop: 18, paddingBottom: 18 }}>
                         Q&A APPLICATION
                     </Typography>
                 </Toolbar>
