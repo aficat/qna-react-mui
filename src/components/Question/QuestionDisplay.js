@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
 import { Button, Card, CardHeader, Grid, TextField } from '@material-ui/core';
 import { observer } from 'mobx-react';
+import axios from 'axios';
 
 class QuestionDisplay extends Component {
     state = {
+        name: ''
     }
 
     routeToHome = () => {
         const { questionStore } = this.props;
         questionStore.updateCurrentPage('home');
+    }
+
+    // set state of new answer typed in text field
+    handleChange = event => {
+        this.setState({ name: event.target.value });
+    }
+
+    // submit answer by calling api to post answer
+    handleSubmit = () => {
+        const { questionStore } = this.props;
+        const { getQuestionId, getAnswers } = questionStore;
+        getAnswers.push(this.state.name);
+        axios.put(`https://5c2d8434b8051f0014cd478a.mockapi.io/question/${getQuestionId}`, { answers: getAnswers })
+            .then(res => {
+                // console.log(res);
+                // console.log(res.data);
+            });
     }
 
     render() {
@@ -53,11 +72,11 @@ class QuestionDisplay extends Component {
                         <Button
                             variant="contained"
                             color="primary"
-                            onClick={this.handleSubmit}
+                            onClick={() => this.handleSubmit()}
                             fullWidth
                         >
                             Submit
-                    </Button>
+                        </Button>
                     </Grid>
                 </Grid>
             </div>

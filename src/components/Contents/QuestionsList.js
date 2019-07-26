@@ -18,11 +18,6 @@ class QuestionsList extends Component {
     this.getQuestionsAPI();
   }
 
-  routeToHome = () => {
-    const { questionStore } = this.props;
-    questionStore.updateCurrentPage('home');
-  }
-
   routeToQ = (id, question, answers) => {
     const { questionStore } = this.props;
     questionStore.updateCurrentPage('question');
@@ -41,6 +36,13 @@ class QuestionsList extends Component {
       })
   }
 
+  deleteQuestion = (id) => {
+    axios.delete(`https://5c2d8434b8051f0014cd478a.mockapi.io/question/${id}`)
+      .then(result => {
+        console.log(result.data)
+      })
+  }
+
   render() {
     return (
       <div>
@@ -49,6 +51,7 @@ class QuestionsList extends Component {
         </Typography>
         <br />
         <Grid container spacing={24} justify="center" style={{ maxWidth: 1200 }}>
+          {this.state.questions.length === 0 && <Typography>No questions found.</Typography>}
           {this.state.questions.map(question =>
             <Grid item md={3} key={question.id}>
               <Card>
@@ -62,7 +65,7 @@ class QuestionsList extends Component {
                   <Button size="small" onClick={() => this.routeToQ(question.id, question.question, question.answers)}>
                     <Typography variant="caption">View Answers ({question.answers.length})</Typography>
                   </Button>
-                  <Button size="small" onClick={null}>
+                  <Button size="small" onClick={() => this.deleteQuestion(question.id)}>
                     <Typography variant="caption">Delete Question</Typography>
                   </Button>
                 </CardActions>

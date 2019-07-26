@@ -12,7 +12,7 @@ class AnswersList extends Component {
         return (
             <Grid container spacing={24} justify="center" style={{ maxWidth: 800, paddingTop: 24 }}>
                 {getAnswers.length === 0 && <Typography>No answers found.</Typography>}
-                {getAnswers && getAnswers.map(answer =>
+                {getAnswers && getAnswers.map((answer, index) =>
                     <Grid item md={12} key={getQuestionId}>
                         <Card fullWidth>
                             <CardHeader
@@ -21,8 +21,7 @@ class AnswersList extends Component {
                                 title={answer}
                                 titleTypographyProps={{ variant: "subtitle1" }}
                             />
-                            <CardActionArea style={{ borderTop: "#E1E1E1 solid 1px", align: "center" }}>
-                                <Typography variant="caption" style={{ padding: 6 }}>DELETE ANSWER</Typography>
+                            <CardActionArea onClick={() => this.deleteAnswer(index, answer)} style={{ align: "center" }}>
                             </CardActionArea>
                         </Card>
                     </Grid>
