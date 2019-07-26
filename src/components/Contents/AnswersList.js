@@ -5,7 +5,6 @@ import { observer } from 'mobx-react';
 import { Card, CardActionArea, CardHeader } from '@material-ui/core';
 
 class AnswersList extends Component {
-
     render() {
         const { questionStore } = this.props;
         const { getAnswers, getQuestionId } = questionStore;
@@ -18,8 +17,10 @@ class AnswersList extends Component {
                             <CardHeader
                                 avatar={null}
                                 action={null}
-                                title={answer}
-                                titleTypographyProps={{ variant: "subtitle1" }}
+                                title={"#" + (index + 1)}
+                                subheader={answer}
+                                titleTypographyProps={{ variant: "subtitle2" }}
+                                subheaderTypographyProps={{ variant: "subtitle1" }}
                             />
                             <CardActionArea onClick={() => this.deleteAnswer(index, answer)} style={{ align: "center" }}>
                             </CardActionArea>
