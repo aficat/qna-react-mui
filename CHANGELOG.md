@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed routing between pages.
+- Amended the api calls to have https link.
 
 ### Added
 - QuestionDisplay page

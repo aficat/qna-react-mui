@@ -29,7 +29,7 @@ class QuestionsList extends Component {
   }
 
   getQuestionsAPI = () => {
-    axios.get(`http://5c2d8434b8051f0014cd478a.mockapi.io/question`)
+    axios.get(`https://5c2d8434b8051f0014cd478a.mockapi.io/question`)
       .then(result => {
         // console.log(result.data)
         this.setState({
