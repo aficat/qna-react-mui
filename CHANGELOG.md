@@ -4,6 +4,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased] - 2019-MM-DD
+## [v0.1.1] - 2019-07-26
 ### Changed
 - Updated page names and button alignment
 
@@ -14,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - QuestionDisplay page
 - AnswersList page
+- To be able to add answers to the questions.
+- Added delete feature to the questions posted.
 
 ### Removed
 - Removed unused css files.
