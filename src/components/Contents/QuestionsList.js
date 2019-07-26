@@ -23,9 +23,12 @@ class QuestionsList extends Component {
     questionStore.updateCurrentPage('home');
   }
 
-  routeToQ = () => {
+  routeToQ = (id, question, answers) => {
     const { questionStore } = this.props;
     questionStore.updateCurrentPage('question');
+    questionStore.updateQuestionId(id);
+    questionStore.updateQuestion(question);
+    questionStore.updateAnswers(answers);
   }
 
   getQuestionsAPI = () => {
@@ -56,7 +59,7 @@ class QuestionsList extends Component {
                   titleTypographyProps={{ variant: "subtitle1" }}
                 />
                 <CardActions style={{ borderTop: "#E1E1E1 solid 1px", align: "center" }}>
-                  <Button size="small" onClick={this.routeToQ}>
+                  <Button size="small" onClick={() => this.routeToQ(question.id, question.question, question.answers)}>
                     <Typography variant="caption">View Answers ({question.answers.length})</Typography>
                   </Button>
                   <Button size="small" onClick={null}>

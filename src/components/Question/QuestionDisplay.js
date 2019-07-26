@@ -12,6 +12,8 @@ class QuestionDisplay extends Component {
     }
 
     render() {
+        const { questionStore } = this.props;
+        const { getQuestion } = questionStore;
         return (
             <div align="center">
                 <Button
@@ -26,7 +28,7 @@ class QuestionDisplay extends Component {
                     <CardHeader
                         avatar={null}
                         action={null}
-                        title={"What is a question?"}
+                        title={getQuestion}
                         titleTypographyProps={{ variant: "subtitle1" }}
                     />
                 </Card>
