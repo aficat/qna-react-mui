@@ -8,6 +8,15 @@ All notable version control changes to this project will be documented in [CHANG
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Screenshots of Application
+1. HomePage
+
+![HomePage](https://i.pinimg.com/originals/8e/f2/bf/8ef2bfdb354918c0351c065502c92cf3.png)
+
+2. Answers for each Question Page
+
+![Answers for each Question Page](https://i.pinimg.com/originals/e7/e3/39/e7e33961f0777b22e23b0ce270b03c79.png)
+
 ## Overview of Components
 ### Wireframes
 Wireframe can be found in "wireframes" folder called "design.xd".
